@@ -41,12 +41,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/change/password', [AdminController::class, 'Adminchangepassword'])->name('admin.change.password');
     Route::post('admin/update/password', [AdminController::class, 'Adminupdatepassword'])->name('admin.update.password');
     Route::get('/admin/calender', [AdminController::class, 'Admincalender'])->name('admin.calender');
-
+    Route::get('list',[CrudController::class,'index'])->name('user.list');
 });
 Route::get('/admin/login', [AdminController::class, 'Adminlogin'])->name('admin.login');
 
-//CRUDS
-Route::get('list',[CrudController::class,'index'])->name('user.list');
+//CRUDS for user
 Route::get('add',[CrudController::class,'add'])->name('user.add');
 Route::post('save',[CrudController::class,'save'])->name('user.save');
 Route::get('edit/{id}',[CrudController::class,'edit'])->name('user.edit');

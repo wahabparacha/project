@@ -33,19 +33,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php
-                            $i = 1;
-                        @endphp
                         @foreach ($data as $user)
                             <tr>
-                                <td>{{$i++}}</td>
+                                <td>{{$user->id}}</td>
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->phone }}</td>
                                 <td>{{ $user->address }}</td>
-                                <td><a href="{{ url('edit/' . $user->id) }}" class="btn btn-primary">EDIT</a>
-                                    | <a href="{{ url('delete/' . $user->id) }}" class="btn btn-danger">DELETE</a> </td>
+                                <td><a href="{{ route('user.edit', ['id' => $user->id]) }}" class="btn btn-primary">EDIT</a>
+                                    | <a href="{{ route('user.delete', ['id' => $user->id]) }}" class="btn btn-danger">DELETE</a> </td>
                             </tr>
                         @endforeach
                     </tbody>
