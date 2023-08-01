@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CrudController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 });
 Route::get('/admin/login', [AdminController::class, 'Adminlogin'])->name('admin.login');
+
+//CRUDS
+Route::get('list',[CrudController::class,'index'])->name('user.list');
+Route::get('add',[CrudController::class,'add'])->name('user.add');
+Route::post('save',[CrudController::class,'save'])->name('user.save');
+Route::get('edit/{id}',[CrudController::class,'edit'])->name('user.edit');
+Route::post('update',[CrudController::class,'update'])->name('user.update');
+Route::get('delete/{id}',[CrudController::class,'delete'])->name('user.delete');
