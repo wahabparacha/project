@@ -250,9 +250,9 @@
                             </a>
                         </li>
                         <li class="dropdown-item py-2">
-                            <a href="{{route('login')}}" class="text-body ms-0">
+                            <a href="{{url('list')}}" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="repeat"></i>
-                                <span>Switch User</span>
+                                <span>Add Update User</span>
                             </a>
                         </li>
                         <li class="dropdown-item py-2">
