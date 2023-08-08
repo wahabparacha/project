@@ -172,7 +172,6 @@ $(document).ready(function(){
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
-                        <th>Address</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -184,7 +183,6 @@ $(document).ready(function(){
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->phone}}</td>
-                        <td>{{$user->address}}</td>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
