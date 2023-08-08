@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Driver;
+use App\Models\Trip;
 
 class User extends Authenticatable
 {
@@ -42,4 +44,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function driver()
+    {
+        return $this->hasOne(Driver::class);
+    }
+    public function trips()
+    {
+        return $this->hasMany(Trip::class);
+    }
+    public function assignedDriver()
+    {
+        return $this->hasOne(Driver::class);
+    }
 }

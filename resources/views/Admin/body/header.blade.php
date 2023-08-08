@@ -3,13 +3,6 @@
         <i data-feather="menu"></i>
     </a>
     <div class="navbar-content">
-        <form class="search-form">
-            <div class="input-group">
-                <div class="input-group-text">
-                    <i data-feather="search"></i>
-                </div>
-                <input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
-            </div>
         </form>
         <ul class="navbar-nav">
 
@@ -250,9 +243,9 @@
                             </a>
                         </li>
                         <li class="dropdown-item py-2">
-                            <a href="{{url('list')}}" class="text-body ms-0">
+                            <a href="{{route('login')}}" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="repeat"></i>
-                                <span>Add Update User</span>
+                                <span>Switch User</span>
                             </a>
                         </li>
                         <li class="dropdown-item py-2">

@@ -17,7 +17,10 @@ class BaseRepository implements BaseRepositoryInterface
     {
         return $this->model->all();
     }
-
+    public function paginate()
+    {
+        return $this->model->paginate(5);
+    }
     public function find($id)
     {
         return $this->model->find($id);
